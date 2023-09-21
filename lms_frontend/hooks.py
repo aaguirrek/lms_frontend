@@ -10,6 +10,9 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
+website_route_rules = [
+    {"from_route": "/training/<path:app_path>", "to_route": "training"},
+]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/lms_frontend/css/lms_frontend.css"
 # app_include_js = "/assets/lms_frontend/js/lms_frontend.js"

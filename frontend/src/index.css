@@ -1,0 +1,77 @@
+@import './assets/Inter/inter.css';
+@import 'frappe-ui/src/style.css';
+
+:root{
+	--bg-color:rgba(0,0,0,0.75);
+	--bg-card:rgba(255,255,255,0.05);
+	--font-color:rgb(255,255,255);
+	--primary:#2b58bf;
+	--scrollbar-thumb-color: #434a52;
+    --scrollbar-track-color: #242a30;
+}
+*{
+	color:var(--font-color);
+}
+.bg-color{
+	background-color: var(--bg-color);
+}
+.bg-card{
+	background-color: var(--bg-card);
+}
+
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-corner {
+    background: var(--scrollbar-track-color);
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border-radius: 6px;
+}
+*::-webkit-scrollbar-track, *::-webkit-scrollbar-corner {
+    background: var(--scrollbar-track-color);
+}
+
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+    left: calc(50% - 40px);
+    position: absolute;
+    top: calc(50% - 40px);
+}
+.loadingdiv{
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    z-index: 200000;
+    width: 100%;
+    height: 100%;
+	backdrop-filter: blur(50px);
+	-webkit-backdrop-filter: blur(50px);
+}
+.lds-dual-ring:after {
+	content: " ";
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #fff;
+	border-color: #fff transparent #fff transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+	}
+	@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.modal.fade.show[role="dialog"]{
+	display:none!important;
+}
